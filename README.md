@@ -1,4 +1,4 @@
-FEATURE EXTRACTION CODE FOR MEDIAN FILTERING FORENSICS
+FEATURE EXTRACTION CODES FOR MEDIAN FILTERING FORENSICS
 
 This repository includes three methods for median filtering forensics in digital images. The codes are created for following publications:
 
@@ -9,7 +9,7 @@ This repository includes three methods for median filtering forensics in digital
 3. A. Gupta and D. Singhal, “A Simplistic Global Median Filtering Forensics Based on Frequency Domain Analysis of Image Residuals”, ACM Transactions on Multimedia Computing, Communications and Applications, vol. 15, no. 3, pp. 71:1-71:23, August 2019. 
 
 
-It contains following 3 folders:
+It contains following 3 folders corresponding to three different feature sets:
 
 1. Feature_set_SK: The folder contains following source codes:
     
@@ -38,11 +38,11 @@ It contains following 3 folders:
     d. ucid00001.tif: example image from UCID database
     
 
-For any queries, please contact Divya Singhal at singhal_dia@yahoo.com
+For any queries or to report a bug in the code, please contact Divya Singhal at singhal_dia@yahoo.com
     
 
 HOW TO CITE:
-If you are using this code for scholarly or academic research, please cite this papers as:
+If you are using these codes for scholarly or academic research, please cite papers as:
 
 1. A. Gupta and D. Singhal, “Analytical Global Median Filtering Forensics Based on Moment Histograms”, ACM transactions on Multimedia Computing, Communications and Applications (TOMM), vol. 14, no. 2, pp. 44:1–44:23, April 2018. https://doi.org/10.1145/3176650. 
 
