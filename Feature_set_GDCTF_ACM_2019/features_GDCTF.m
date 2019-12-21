@@ -1,4 +1,4 @@
-function [F] = func_p3glbl(img)
+function [F] = features_GDCTF(img)
 % *************************************************************************
 %  This function calculates the GDCTF feature set for median filtering (MF) detection.
 %  Matlab version: 2016b
