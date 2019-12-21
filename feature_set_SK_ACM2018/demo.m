@@ -4,8 +4,8 @@ px_ol=2;
 r_req=64;
 c_req=64;
 h=(ones(win_sz))/(win_sz*win_sz);
-Imofiles=dir('C:\divya\databases\combined_database\com32_all\*.tif');
-Immffiles=dir('C:\divya\databases\combined_database\com32_35\*.tif');
+Imofiles=dir('C:\divya\databases\combined_database\com32_org\*.tif');% Input your path for  original images
+Immffiles=dir('C:\divya\databases\combined_database\com32_mf\*.tif');%% Input your path for median filtered images(correspondng to original images)
 count=length(Imofiles);
 label=[ones(count,1);2*ones(count,1)];
 
@@ -51,13 +51,13 @@ for t=1:count
     q=1;
     l=1;
     clear Imo Imo_bn Imo_b Immf Immf_bn Immf_b
-    Imo=strcat('C:\divya\databases\combined_database\com32_all\',Imofiles(t).name);
+    Imo=strcat('C:\divya\databases\combined_database\com32_org\',Imofiles(t).name);
     Imo_bn=imread(Imo);
     if(size(Imo_bn,3)==3)
         Imo_bn=rgb2gray(Imo_bn);
     end
     Imo_b=double((Imo_bn));
-    Immf=strcat('C:\divya\databases\combined_database\com32_35\',Immffiles(t).name);
+    Immf=strcat('C:\divya\databases\combined_database\com32_mf\',Immffiles(t).name);
     Immf_bn=imread(Immf);
     %Immf_b=medfilt2(Imo_b,[5 5]);
     %imwrite(uint8(Immf_bn),'test15.jpg','Quality',90);
