@@ -1,0 +1,35 @@
+function [F] = func_p3glbl(I)
+% *************************************************************************
+%  This function calculates the GDCTF feature set for median filtering (MF) detection.
+%  Matlab version: 2016b
+% -------------------------------------------------------------------------
+%  
+% 
+% -------------------------------------------------------------------------
+%  Input: 
+%    img .... input image (one channel)
+%        
+% ------------------------------------------------------------------------- 
+%  Output:
+%        F .... resulting feature
+% -------------------------------------------------------------------------
+%  Notes:
+%  The GDCTF feature set is 4 dimensional feature set.
+%  1. 9 features from skewness histogram bin haights.
+%  2. 4 features from four first order moments of DCT matrix of image residual. 5 features from 1st,2nd and fourth moments of skewness data and 1st
+%  and 2nd moments of kurtosis data.
+%  4. 1 feature from number of NaN blocks.
+% -------------------------------------------------------------------------
+%  Example:
+%    img = imread('Lena.bmp'); % read gray image
+%    F = features_GDCTF(img); % SK features
+%    
+% *************************************************************************
+  A=dct2(I);
+  A0=mean(A(:));
+  A1=var(A(:));
+  A2=skewness(A(:));
+  A3=kurtosis(A(:));
+  F=[A0 A1 A2 A3];
+end
+
