@@ -34,7 +34,7 @@ DOI: https://doi.org/10.1145/3321508
 
     a. features_GDCTF.m: function to extract GDCTF feature set for an image (for both training and testing purposes)
     
-    d. ucid00001.tif: example image from UCID database
+    b. ucid00001.tif: example image from UCID database
 
 
 For any queries or to report a bug in the code, please contact Divya Singhal at singhal_dia@yahoo.com
@@ -47,4 +47,4 @@ If you are using these codes for scholarly or academic research, please cite pap
 
 2. A. Gupta and D. Singhal, “Global Median Filtering Forensic Method Based on Pearson Parameter Statistics”, IET Image Processing, vol. 13, no. 2, pp. 2045-2057, October 2019. doi: 10.1049/iet-ipr.2018.6074.
 
-3. A. Gupta and D. Singhal, “A Simplistic Global Median Filtering Forensics Based on Frequency Domain Analysis of Image Residuals”, ACM Transactions on Multimedia Computing, Communications and Applications, vol. 15, no. 3, pp. 71:1-71:23, August 2019.
+3. A. Gupta and D. Singhal, “A Simplistic Global Median Filtering Forensics Based on Frequency Domain Analysis of Image Residuals”, ACM transactions on Multimedia Computing, Communications and Applications (TOMM), vol. 15, no. 3, pp. 71:1-71:23, August 2019.
