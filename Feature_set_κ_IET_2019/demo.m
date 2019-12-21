@@ -1,8 +1,8 @@
 close all;
 win_sz=3;
 px_ol=2;
-Imofiles=dir('C:\divya\databases\ucid\ucid128_mf3\*.tif');
-Immffiles=dir('C:\divya\databases\ucid\ucid128_mf5\*.tif');
+Imofiles=dir('C:\divya\databases\ucid\ucid128_org\*.tif');% Input your path for original images 
+Immffiles=dir('C:\divya\databases\ucid\ucid128_mf5\*.tif'); % Input your path for median filtered images(correspondng to original images)
 count=length(Imofiles);
 label=[ones(count,1);2*ones(count,1)];
 f1o=zeros(1,count);
@@ -28,7 +28,7 @@ h_allmf=zeros(count,11);
 %%
 for t=1:count
     display(t)
-I1=strcat('C:\divya\databases\ucid\ucid128_mf3\',Imofiles(t).name);
+I1=strcat('C:\divya\databases\ucid\ucid128_org\',Imofiles(t).name);%  Input your path for original images 
 I2=imread(I1);
     
     if(size(I2,3)==3)
@@ -40,7 +40,7 @@ I2=imread(I1);
     I6=double(I5);
     I7=medfilt2((I6),[3 3]);
     Iro=I6-I7;
-Immf=strcat('C:\divya\databases\ucid\ucid128_mf5\',Immffiles(t).name);
+Immf=strcat('C:\divya\databases\ucid\ucid128_mf5\',Immffiles(t).name);% Input your path for median filtered images(correspondng to original images)
 %I2=double(I2);
 %I8=medfilt2((I2),[5 5]);
 Immf=imread(Immf);
