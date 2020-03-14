@@ -26,9 +26,10 @@ function [F] = features_GDCTF(img)
 % *************************************************************************
 if(size(img,3)==3)
         img=rgb2gray(img);
-    end 
+    end
+img=double(img);
 img=medfilt2(img,[3 3])-img;  
-  A=dct2(double(img));
+  A=dct2(img);
   A0=mean(A(:));
   A1=var(A(:));
   A2=skewness(A(:));
